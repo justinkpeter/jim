@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import styles from "@/styles/MarqueeSwiper.module.css";
 import { gsap }  from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-// import ScrollSmoother from 'gsap/ScrollSmoother';
 import Swiper from 'swiper';
 
 export const MarqueeSwiper = () => {
@@ -11,25 +9,12 @@ export const MarqueeSwiper = () => {
     useEffect(() => {
         // Register ScrollTrigger and ScrollSmoother plugins with GSAP
         gsap.registerPlugin(ScrollTrigger);
-        // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
         ScrollTrigger.refresh();
 
         // Configure ScrollTrigger
         ScrollTrigger.config({
             autoRefreshEvents: 'visibilitychange, DOMContentLoaded,load, resize'
         });
-
-        // Smooth scroller
-        // const smoother = ScrollSmoother.create({
-        //     wrapper: '#smooth-wrapper',
-        //     content: '#smooth-content',
-        //     smooth: 2,
-        //     smoothTouch: false,
-        //     normalizeScroll: true,
-        //     ignoreMobileResize: true,
-        //     effects: true,
-        //     preventDefault: true
-        // });
 
         // Marquee effect
         const marquee = document.querySelectorAll('.marquee-swiper');
@@ -120,30 +105,12 @@ export const MarqueeSwiper = () => {
 
                                          }}/>
                                 ))}
-                                {/*<div className='marquee-swiper-item'> 123 </div>*/}
-                                {/*<div className='marquee-swiper-item'></div>*/}
-                                {/*<div className='marquee-swiper-item'></div>*/}
-                                {/*<div className='marquee-swiper-item'> 3 </div>*/}
-                                {/*<div className='marquee-swiper-item'> 4 </div>*/}
-                                {/*<div className='marquee-swiper-item'> 5</div>*/}
-                                {/*<div className='marquee-swiper-item'></div>*/}
-                                {/*<div className='marquee-swiper-item'></div>*/}
-                                {/*<div className='marquee-swiper-item'></div>*/}
-                                {/*<div className='marquee-swiper-item'></div>*/}
                             </div>
                         </div>
                         <div className="marquee-swiper-carousel marquee-swiper-carousel-2">
                             <div className="marquee-swiper-items">
                                 { Array.from(Array(10).keys()).map((item, index) => (
-                                    <div key={index} className={'marquee-swiper-item relative group'}
-                                         style={{
-                                             // backgroundImage: 'url(/img_2.jpg)',
-                                             // backgroundSize: 'cover',
-                                             // backgroundPosition: 'center',
-                                             // backgroundRepeat: 'no-repeat'
-
-                                         }}>
-
+                                    <div key={index} className={'marquee-swiper-item relative group'}>
                                         <div className={'absolute group-hover:scale-125 transition-all ease-in-out duration-700  w-full h-full'}
                                              style={{
                                                  backgroundImage: 'url(/img_2.jpg)',

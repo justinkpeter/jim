@@ -116,6 +116,8 @@
     position: relative;
     width: 70%;
     margin: 0 auto;
+    height: auto;
+    background-color: red;
     z-index: -100;
     @media (max-width: $layout-breakpoint-xsmall) {
       top: -56px;
