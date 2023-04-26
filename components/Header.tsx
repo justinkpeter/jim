@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import styles from '@/styles/Header.module.css';
 
 const Header = () => {
     return (
@@ -8,16 +7,16 @@ const Header = () => {
             initial={{ opacity: 0, y: -180 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-                ease: "easeIn",
+                ease: "easeInOut",
                 duration: 1,
                 delay: 0.6,
             }}
-            className={styles.header}>
-            <div className={styles['header-inner']}>
-                <div className={styles['logo']}>jim.</div>
-                <nav className={styles['nav']}>
+            className='header'>
+            <div className='header-inner'>
+                <div className='logo'>✶jim</div>
+                <nav className='nav'>
                     <li>
-                        <a href='/design'>Design</a>
+                        <a href='/design'>portfolio</a>
                     </li>
                     <li>
                         <a href='/strategy'>Strategy</a>
@@ -25,17 +24,17 @@ const Header = () => {
                     <li>
                         <a href='/cases'>Cases</a>
                     </li>
-                    <li>
-                        <a href='/about'>About</a>
-                    </li>
+                    {/*<li>*/}
+                    {/*    <a href='/about'>About</a>*/}
+                    {/*</li>*/}
                     <li>
                         <a href='/why'>Why work with us?</a>
                     </li>
                 </nav>
-                <div className={styles.contact}>
+                <div className='contact'>
                     <a href='/contact'>Let's work together</a>
                 </div>
-                <div className={styles['hamburger-menu']}>
+                <div className='hamburger-menu'>
                     <span></span>
                     <span></span>
                 </div>
